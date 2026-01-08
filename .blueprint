@@ -1,0 +1,10 @@
+created:
+    - database/factories/CategoryFactory.php
+    - database/factories/ToolFactory.php
+    - database/migrations/2026_01_08_001615_create_categories_table.php
+    - database/migrations/2026_01_08_001616_create_tools_table.php
+    - app/Models/Category.php
+    - app/Models/Tool.php
+models:
+    Category: { name: 'string:80', description: 'text nullable', status: 'enum:activa,inactiva default:activa', relationships: { hasMany: Tool } }
+    Tool: { category_id: 'id foreign', name: 'string:120', description: 'text nullable', brand: 'string:80 nullable', price: 'decimal:10,2', stock: 'integer default:0', status: 'enum:activa,inactiva default:activa', image: 'string:255 nullable', relationships: { belongsTo: Category } }

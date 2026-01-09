@@ -23,10 +23,10 @@ class UserSeeder extends Seeder
 
         // Crear usuario
         $user = User::factory()->create([
-            'name' => 'usuario',
-            'email' => 'user@gmail.com',
-            'password' => bcrypt('user12345678'),
+            'name' => 'Co-Admin',
+            'email' => 'co-admin@gmail.com',
+            'password' => bcrypt('co-admin12345678'),
         ]);
-        $user->assignRole('user');
+        $user->assignRole('co-admin');
     }
 }

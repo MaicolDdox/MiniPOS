@@ -22,7 +22,7 @@ class RoleSeeder extends Seeder
         // -------------------------
 
         $admin = Role::firstOrCreate(['name' => 'admin', 'guard_name' => $guardName]);
-        $user  = Role::firstOrCreate(['name' => 'user', 'guard_name' => $guardName]);
+        $coAdmin  = Role::firstOrCreate(['name' => 'co-admin', 'guard_name' => $guardName]);
 
         // -------------------------
         // Creación de Permirsos
